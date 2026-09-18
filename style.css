@@ -1,0 +1,318 @@
+/* Reset Basic */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0b1329;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* 1. Navbar */
+.navbar {
+    background-color: #0d1730;
+    padding: 14px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-title {
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+/* 2. Hero Section */
+.hero-section {
+    padding: 30px 20px 20px 20px;
+    background-color: #0d1730;
+    text-align: center;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hero-logo-wrapper {
+    margin-bottom: 15px;
+}
+
+.hero-logo {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #38bdf8;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+    display: block;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.hero-subtitle {
+    font-size: 1.15rem;
+    color: #94a3b8;
+}
+
+.divider-white {
+    height: 3px;
+    background-color: #ffffff;
+    width: 100%;
+    margin: 10px 0 25px 0;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* 3. Grid Tata Letak 3 Kolom Presisi */
+.app-grid-section {
+    padding: 10px 15px 25px 15px;
+}
+
+.custom-layout-container {
+    display: flex; /* Menggunakan Flexbox agar tinggi kolom kiri otomatis menyesuaikan kolom kanan */
+    gap: 8px; 
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Kolom Kiri (Memanjang Penuh ke Bawah mengikuti tinggi total tumpukan kanan) */
+.vertical-card {
+    flex: 1;
+    background: #111c38;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+}
+
+.vertical-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Kolom Tengah & Kanan (Tumpukan Kotak Kecil) */
+.middle-grid-group, 
+.right-grid-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.horizontal-card {
+    background: #111c38;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+}
+
+.horizontal-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+    .custom-layout-container {
+        flex-direction: column;
+    }
+}
+
+/* 4. Section Instruksi */
+.instructions-section {
+    padding: 20px 0;
+}
+
+.welcome-box {
+    background-color: rgba(15, 23, 42, 0.8);
+    border-left: 5px solid #0284c7;
+    padding: 20px 24px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.welcome-box h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #38bdf8;
+    font-weight: 700;
+}
+
+.welcome-box p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.welcome-box ul {
+    list-style: none;
+    padding-left: 5px;
+}
+
+.welcome-box li {
+    font-size: 1.15rem;
+    color: #e2e8f0;
+    margin-top: 6px;
+    line-height: 1.5;
+}
+
+.instruction-text {
+    font-size: 1.35rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #f1f5f9;
+    font-weight: 500;
+}
+
+.note-text {
+    font-size: 1.2rem;
+    color: #f43f5e;
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 30px;
+    background: rgba(244, 63, 94, 0.1);
+    padding: 12px 16px;
+    border-radius: 6px;
+    border-left: 4px solid #f43f5e;
+}
+
+.download-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 30px;
+}
+
+.btn-blue {
+    background-color: #0284c7;
+    color: #ffffff;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.15rem;
+    transition: all 0.2s ease;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3);
+}
+
+.btn-blue:hover {
+    background-color: #0369a1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(2, 132, 199, 0.5);
+}
+
+/* 5. Bottom Info & Widget Section */
+.bottom-info-section {
+    padding-bottom: 40px;
+}
+
+.info-blue-box {
+    background: linear-gradient(135deg, #0369a1 0%, #0f172a 100%);
+    border: 1px solid #38bdf8;
+    padding: 22px 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.info-blue-box p {
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: #ffffff;
+}
+
+.info-blue-box p:last-child {
+    margin-bottom: 0;
+}
+
+.info-blue-box strong {
+    color: #7dd3fc;
+}
+
+.widget-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+}
+
+.widget-card {
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.widget-card h5 {
+    color: #38bdf8;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.ip-info ul {
+    list-style: none;
+}
+
+.ip-info li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.05rem;
+    padding: 6px 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.weather-display {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.weather-display .temp {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #38bdf8;
+}
+
+.cloud-icon {
+    font-size: 2.2rem;
+}
+
+.footer {
+    text-align: center;
+    padding: 25px;
+    color: #64748b;
+    font-size: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
